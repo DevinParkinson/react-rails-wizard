@@ -46,6 +46,15 @@ class Profile extends React.Component {
   handleSubmit = (e) => {
     e.preventDefault();
     const { formValues: { name, email, file, gamertag}} = this.state;
+    const { user, dispatch } = this.props;
+    dispatch(updateUser(user.id, { name, email, file, gamertag}))
+    this.setState({
+      editing: false,
+      formValues: {
+        ...this.setState.formValues,
+        file: ''
+      }
+    })
   }
 
   profileView = () => {
