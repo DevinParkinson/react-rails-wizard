@@ -12,14 +12,18 @@ gem 'rails', '~> 5.1.5'
 gem 'pg', '>= 0.18', '< 2.0'
 # Use Puma as the app server
 gem 'puma', '~> 3.7'
+gem 'jbuilder', '~> 2.5'
 gem 'aws-sdk'
 gem 'omniauth'
 gem 'devise'
 gem 'devise_token_auth'
+gem 'kaminari'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'pry'
   gem 'dotenv-rails'
+  gem 'faker'
 end
 
 group :development do
